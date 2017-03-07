@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<script src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript">		
+			$(document).ready(function(){
+				var i;
+				$(".prev,.next").hover(function(){
+					$(this).stop(true,false).fadeTo("show",0.9);
+				},function(){
+					$(this).stop(true,false).fadeTo("show",0.4);
+				});
+				$(".banner-box").slide({
+					titCell:".hd ul",
+					mainCell:".bd ul",
+					effect:"fold",
+					interTime:2500,
+					delayTime:500,
+					autoPlay:true,
+					autoPage:true, 
+					trigger:"click" 
+				});
+				
+				$("#img1").hover(function(){
+					$("#text1").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto1');
+  						var s = document.getElementById('show1');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+				},function(){
+					$("#text1").fadeOut();
+					clearInterval(timer);
+					s.innerHTML="";
+				});
+				$("#img2").hover(function(){
+					$("#text2").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto2');
+  						var s = document.getElementById('show2');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+				},function(){
+					$("#text2").fadeOut();
+					clearInterval(timer);
+					s.innerHTML="";
+				});
+				$("#img3").hover(function(){
+					$("#text3").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto3');
+  						var s = document.getElementById('show3');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+				},function(){
+					$("#text3").fadeOut();
+					clearInterval(timer);
+					s.innerHTML="";
+				});
+			});
+		</script>
+	</head>
+
+	
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		.navigation
+		{
+			width: 180px;
+			height: 940px;
+			background-color: rgba(0,0,0,0.2);
+			z-index: 3;
+		}
+		.navigation ul
+		{
+			list-style:none;
+		}
+		.div_inline{ 
+			display:inline;
+			float: left;
+		}
+		.title{
+			font-size: 70;
+			position:fixed;
+			left: 10%;
+			top: 20px;
+			z-index: 3;
+		}
+		.navigation li
+		{
+			float:left;
+			height: 90px;
+			width: 180px;
+			display: block;
+			text-align: center;
+			line-height: 90px;
+			color: white;
+			font-size: 25;
+		}
+		.navigation li:hover
+		{
+			background-color: rgba(73,11,11,0.6);
+		}
+		@charset "utf-8";
+		/* css 重置 */
+		body,div,ul,li,dl,dt,dd,h2,p{padding:0;margin:0;font-family:"微软雅黑";}
+		ul{list-style:none ;}
+		img{border:none;}
+		a{blr:expression(this.onFocus=this.blur());outline:none;}
+
+			/* banner-box */
+			.banner-box{min-width:1720px;position:relative;overflow:hidden;}
+			.banner-box .bd{ width:100% !important;}
+			.banner-box .bd li .m-width {width:1280px;margin:0 auto;overflow:hidden;}
+			.banner-box .bd li{width:100% !important;height:720px;}
+			.banner-box .bd li a{display:block;background-size:auto;}
+
+			.banner-btn{width:1280px;/*position:absolute;top:120px;left:50%;*/margin-left:-605px;}
+			.banner-btn a{display:block;width:49px;height:104px;position:absolute;top:0;filter:alpha(opacity=40);-moz-opacity:0.4;-khtml-opacity:0.4;opacity:0.4;}
+			.banner-btn a.prev{left:160px;background:url(foot.png) no-repeat 0 0;} 
+			.banner-btn a.next{right:-150px;background:url(foot.png) no-repeat -49px 0;}
+
+			.banner-box .hd {position:absolute;top:60px;left:880px;}
+			.banner-box .hd ul li{width:12px;height:12px;border-radius :50%;text-indent:-9999px;margin-right:20px;background:#ccc;float:left;cursor:pointer;}
+			.banner-box .hd ul li.on{background:#DA324D;}
+	</style>
+
+	<body style="background-image:url(body.jpg);no-repeat top center #000;background-attachment: fixed; background-size: cover;">
+		<div class="div_inline">
+			<div class="navigation"style="position: fixed;left: 0px;top: 0px">
+				<a href="../主页/index.html"><img src="自制LOGO.png"width="180";height="180";style="padding: 5px"/></a>
+				<ul>
+					<a href="../俱乐部/club.html"><li id="a">俱乐部</li></a>
+					<a href="../球队/team.html"><li id="b">球队</li></a>
+					<a href="../球迷天地/fans.html"><li id="c">球迷天地</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="div_inline">
+			<div class="title"style="color:white">&nbsp&nbsp里程足球俱乐部</div>
+			<hr width=40% size=40 color=#4DC46F style="border-radius: 20px; position:fixed; top:90px;left:200px;z-index: 2">
+			<div class="vituarl" style="position: absolute;top:140px;left:170px;width: 1735px;height: 800px;overflow: hidden;">
+				<div style="position: absolute;width: 1752px;height: 800px;z-index: 1;overflow: scroll;overflow-x:hidden;overflow-y:auto;">
+					<div class="banner-box"style="position: absolute;top:0px;left: 18px;height: 800px;background-color: rgba(0,0,0,0.5);">
+						<div class="bd">
+					        <ul>          	    
+					            <li>
+					                <div class="m-width">
+					                <a id="img1" href="javascript:void(0);"><img src="1.jpg" style="width: 1280px;height:512px;"/></a>
+					                </div>
+					            </li>
+					            <li>
+					                <div class="m-width">
+					                <a id="img2" href="javascript:void(0);"><img src="2.jpg" style="width: 1280px;height:512px;" /></a>
+					                </div>
+					            </li>
+					            <li>
+					                <div class="m-width">
+					                <a id="img3" href="javascript:void(0);"><img src="3.jpg" style="width: 1280px;height:512px;"/></a>
+					                </div>
+					            </li>
+					        </ul>
+					    </div>
+					    <div class="banner-btn"style="position: absolute;top:200px;left:670px">
+					        <a class="prev" href="javascript:void(0);"></a>
+					        <a class="next" href="javascript:void(0);"></a>
+					        <div class="hd"style="position: absolute;top:280px;left:757px"><ul></ul></div>
+					    </div>
+					    <div id="text1" style="color: white;font-size: 40;position: absolute;top: 550px;left: 200px;display: none;">
+					    	<p id="sto1" style="display:none;">We are the CHAMPIONS!</p>
+							<p id="show1" style="position: absolute;left: 20px;width: 1720px;"></p>
+						</div>
+						<div id="text2" style="color: white;font-size: 40;position: absolute;top: 550px;left: 200px;display: none;">
+							<p id="sto2" style="display:none;">We have DREAMS!</p>
+							<p id="show2" style="position: absolute;left: 20px;width: 1720px;"></p>
+						</div>
+						<div id="text3" style="color: white;font-size: 40;position: absolute;top: 550px;left: 200px;display: none;">
+							<p id="sto3" style="display:none;">We NEVER give up!</p>
+							<p id="show3" style="position: absolute;left: 20px;width: 1720px;"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

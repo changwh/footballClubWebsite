@@ -1,0 +1,313 @@
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<script src="jquery.js"></script>
+		<script type="text/javascript">	
+		$(document).ready(function(){
+			$("#img1").hover(function(){
+					$("#text1").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto1');
+  						var s = document.getElementById('show1');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+			},function(){
+				$("#text1").fadeOut();
+				clearInterval(timer);
+				s.innerHTML="";
+			});
+			$("#img2").hover(function(){
+					$("#text2").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto2');
+  						var s = document.getElementById('show2');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+			},function(){
+				$("#text2").fadeOut();
+				clearInterval(timer);
+				s.innerHTML="";
+			});
+			$("#img3").hover(function(){
+					$("#text3").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto3');
+  						var s = document.getElementById('show3');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+			},function(){
+				$("#text3").fadeOut();
+				clearInterval(timer);
+				s.innerHTML="";
+			});
+			$("#img4").hover(function(){
+					$("#text4").fadeIn();
+					for(i=0;i<1;i++){
+						var story = document.getElementById('sto4');
+  						var s = document.getElementById('show4');
+  						var a = story.innerHTML.slice("");
+						var i = 0;
+						timer=setInterval(function(){
+							s.innerHTML=story.innerHTML.substring(0,i)
+							i++;
+							if(s.innerHTML==story.innerHTML){clearInterval(timer);};
+						},20);
+					}
+			},function(){
+				$("#text4").fadeOut();
+				clearInterval(timer);
+				s.innerHTML="";
+			});
+		})
+		</script>
+		<title>Login PHP</title>
+		<link rel="stylesheet" href="style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("#login").click(function(){
+				
+				var action = $("#lg-form").attr('action');
+				var form_data = {
+					username: $("#username").val(),
+					password: $("#password").val(),
+					is_ajax: 1
+				};
+				
+				$.ajax({
+					type: "POST",
+					url: action,
+					data: form_data,
+					success: function(response)
+					{
+						if(response == "success")
+							$("#lg-form").slideUp('slow', function(){
+								$("#message").html('<p class="success">You have logged in successfully!</p><p>Redirecting....</p>');
+							});
+						else
+							$("#message").html('<p class="error">ERROR: Invalid username and/or password.</p>');
+					}	
+				});
+				return false;
+			});
+		});
+		</script>
+	</head>
+
+	
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		.navigation
+		{
+			width: 180px;
+			height: 940px;
+			background-color: rgba(0,0,0,0.2);
+			z-index: 3;
+		}
+		.navigation ul
+		{
+			list-style:none;
+		}
+		.div_inline{ 
+			display:inline;
+			float: left;
+		}
+		.title{
+			font-size: 70;
+			position:fixed;
+			left: 10%;
+			top: 20px;
+			z-index: 3;
+		}
+		.navigation li
+		{
+			float:left;
+			height: 90px;
+			width: 180px;
+			display: block;
+			text-align: center;
+			line-height: 90px;
+			color: white;
+			font-size: 25;
+		}
+		.navigation li:hover
+		{
+			background-color: rgba(73,11,11,0.6);
+		}
+		.lg-container{
+			width:275px;
+			margin:100px auto;
+			padding:20px 40px;
+			border:1px solid #f4f4f4;
+			background:rgba(255,255,255,.5);
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+			
+			-webkit-box-shadow: 0 0 2px #aaa;
+			-moz-box-shadow: 0 0 2px #aaa;
+			box-shadow: 0 0 2px #aaa;
+		}
+		.lg-container h1{
+			font-size:40px;
+			text-align:center;
+		}
+		#lg-form > div {
+			margin:10px 5px;
+			padding:5px 0;
+		}
+		#lg-form label{
+			display: none;
+			font-size: 20px;
+			line-height: 25px;
+		}
+		#lg-form input[type="text"],
+		#lg-form input[type="password"]{
+			border:1px solid rgba(51,51,51,.5);
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+			padding: 5px;
+			font-size: 16px;
+			line-height: 20px;
+			width: 100%;
+			font-family: 'Oleo Script', cursive;
+			text-align:center;
+		}
+		#lg-form div:nth-child(3) {
+			text-align:center;
+		}
+		#lg-form button{
+			font-family: 'Oleo Script', cursive;
+			font-size: 18px;
+			border:1px solid #000;
+			padding:5px 10px;
+			border:1px solid rgba(51,51,51,.5);
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+			
+			-webkit-box-shadow: 2px 1px 1px #aaa;
+			-moz-box-shadow: 2px 1px 1px #aaa;
+			box-shadow: 2px 1px 1px #aaa;
+			cursor:pointer;
+		}
+		#lg-form button:active{
+			-webkit-box-shadow: 0px 0px 1px #aaa;
+			-moz-box-shadow: 0px 0px 1px #aaa;
+			box-shadow: 0px 0px 1px #aaa;
+		}
+		#lg-form button:hover{
+			background:#f4f4f4;
+		}
+		#message{width:100%;text-align:center}
+		.success {
+			color: green;
+		}
+		.error {
+			color: red;
+		}
+	</style>
+
+	<body style="background-image:url(body.jpg);no-repeat top center #000;background-attachment: fixed; background-size: cover;">
+		<div class="div_inline">
+			<div class="navigation"style="position: fixed;left: 0px;top: 0px">
+				<a href="../主页/index.html"><img src="自制LOGO.png"width="180";height="180";style="padding: 5px"/></a>
+				<ul>
+					<a href="../俱乐部/club.html"><li id="a">俱乐部</li></a>
+					<a href="../球队/team.html"><li id="b">球队</li></a>
+					<a href="../球迷天地/fans.html"><li id="c">球迷天地</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="div_inline">
+			<div class="title"style="color:white">&nbsp&nbsp里程足球俱乐部</div>
+			<hr width=40% size=40 color=#4DC46F style="border-radius: 20px; position:fixed; top:90px;left:200px;z-index: 2">
+			<div class="vituarl" style="position: absolute;top:140px;left:170px;width: 1735px;height: 800px;overflow: hidden;">
+				<div style="position: absolute;width: 1752px;height: 800px;z-index: 1;overflow: scroll;overflow-x:hidden;overflow-y:auto;">
+					<div style="position: relative;float: left;width: 480px;height:800px;font-size: 35;left: 20px;top: 20px;color: white;/*background-color: rgba(255,255,255,0.2);*/">
+						<div style="position: relative;top: 20px;left: 20px;">比赛信息</div>
+						<div id="img1">
+							<a style="position: relative;top: 50px;left: 25px;"href=""><img src="game.jpg" style="width: 426px;height:300px;"></a>
+							<div id="text1" style="color: white;font-size: 40;position: absolute;top:110px;left: 40px;display: none;">
+					    		<p id="sto1" style="display:none;"><strong>5.15</strong><br>关键之战<br>里程是否能够顺利登顶</p>
+								<p id="show1" style="position: absolute;left: 0px;width: 406px;background-color: rgba(0,0,0,0.2);"></p>
+							</div>
+						</div>
+						<div id="img2">
+							<a style="position: relative;top: 110px;left: 25px;"href=""><img src="game2.jpg" style="width: 426px;height:300px;"></a>
+							<div id="text2" style="color: white;font-size: 40;position: relative;top:-175px;left: 40px;display: none;">
+					    		<p id="sto2" style="display:none;"><strong>5.22</strong><br>晋级还是回家？！</p>
+								<p id="show2" style="position: absolute;left: 0px;width: 406px;text-align: right;background-color: rgba(0,0,0,0.2);"></p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative;float: left;width: 480px;height:800px;font-size: 35;left: 160px;top: 80px;color: white;/*background-color: rgba(255,255,255,0.2);*/">
+						<div style="position: relative;top: 20px;left: 20px;">聚会信息</div>
+						<div id="img3">
+							<a style="position: relative;top: 50px;left: 25px;"href=""><img src="party.jpg" style="width: 426px;height:300px;"></a>
+							<div id="text3" style="color: white;font-size: 40;position: absolute;top:110px;left: 40px;display: none;">
+					    		<p id="sto3" style="display:none;"><strong>5.15</strong><br>和里程一起<br>见证巅峰时刻</p>
+								<p id="show3" style="position: absolute;left: 0px;width: 406px;background-color: rgba(0,0,0,0.2);"></p>
+							</div>
+						</div>
+						<div id="img4">
+							<a style="position: relative;top: 110px;left: 25px;"href=""><img src="party2.jpg" style="width: 426px;height:300px;"></a>
+							<div id="text4" style="color: white;font-size: 40;position: relative;top:-175px;left: 40px;display: none;">
+					    		<p id="sto4" style="display:none;"><strong>5.22</strong><br>奇迹，就差你一个</p>
+								<p id="show4" style="position: absolute;left: 0px;width: 406px;text-align: right;background-color: rgba(0,0,0,0.2);"></p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative;float: left;width: 300px;height:800px;font-size: 35;left: 320px;top: 0px;color: white;/*background-color: rgba(255,255,255,0.2);*/">
+						<div style="position: relative;top: 20px;left: 0px;"></div>
+						<div class="lg-container">
+							<h1>Log In</h1>
+							<form id="lg-form" name="lg-form" method="post">
+									
+								<div>
+									<label for="username">Username:</label>
+									<input type="text" name="username" id="username" placeholder="username"/>
+								</div>
+									
+								<div>
+									<label for="password">Password:</label>
+									<input type="password" name="password" id="password" placeholder="password" />
+								</div>
+								
+								<div>				
+									<button type="submit" id="login">Login</button>
+								</div>
+									
+							</form>
+							<div id="message"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

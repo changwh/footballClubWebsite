@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta charset='utf-8' />
+<script src="jquery.js"></script>
+<script src="2.js" type="text/javascript"></script>
+<link href="1.css" rel="stylesheet" type="text/css" />
+</head>
+
+	
+<style type="text/css">
+	*
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+	.navigation
+	{
+		width: 180px;
+		height: 940px;
+		background-color: rgba(0,0,0,0.2);
+		z-index: 3;
+	}
+	.navigation ul
+	{
+		list-style:none;
+	}
+	.div_inline{ 
+		display:inline;
+		float: left;
+	}
+	.title{
+		font-size: 70;
+		position:fixed;
+		left: 10%;
+		top: 20px;
+		z-index: 3;
+	}
+	.navigation li
+	{
+		float:left;
+		height: 90px;
+		width: 180px;
+		display: block;
+		text-align: center;
+		line-height: 90px;
+		color: white;
+		font-size: 25;
+	}
+	.navigation li:hover
+	{
+		background-color: rgba(73,11,11,0.6);
+	}
+	@charset "utf-8";
+</style>
+
+<body style="background-image:url(body.jpg);no-repeat top center #000;background-attachment: fixed; background-size: cover;">
+	<div class="div_inline">
+		<div class="navigation"style="position: fixed;left: 0px;top: 0px">
+			<a href="../主页/index.html"><img src="自制LOGO.png"width="180";height="180";style="padding: 5px"/></a>
+			<ul>
+				<a href="../俱乐部/club.html"><li id="a">俱乐部</li></a>
+				<a href="../球队/team.html"><li id="b">球队</li></a>
+				<a href="../球迷天地/fans.html"><li id="c">球迷天地</li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="div_inline">
+		<div class="title"style="color:white">&nbsp&nbsp里程足球俱乐部</div>
+			<hr width=40% size=40 color=#4DC46F style="border-radius: 20px; position:fixed; top:90px;left:200px;z-index: 2">
+		<div class="vituarl" style="position: absolute;top:140px;left:170px;width: 1735px;height: 800px;overflow: hidden;">
+			<div style="position: absolute;width: 1752px;height: 800px;z-index: 1;overflow: scroll;overflow-x:hidden;overflow-y:auto;">
+				<div style="position: absolute;top:30px;left:60px;background-color: rgba(0,0,0,0.5);height: 700px;">
+					
+				    <div style="position: absolute;top:0px;left:0px">
+				    <div class="slider" style="width: 500px;height: 70px;background-color: rgba(73,11,11,0.6);position: absolute;top: 15px;left: 0px;"></div>
+				    <table class="tabTitlesContainer" style="position: relative;top: 15px;">
+					    <tr id="tabTitles">
+					        <td id="1" class="tabTitleUnHovered" onmouseenter="tabPageControlHover(0)" onclick="tabPageControlClick(0)" onmouseout="tabPageControlOut(0)">历史</td>
+					        <td id="2" class="tabTitleUnHovered" onmouseenter="tabPageControlHover(1)" onclick="tabPageControlClick(1)" onmouseout="tabPageControlOut(1)">荣誉</td>
+					        <td id="3" class="tabTitleUnHovered" onmouseenter="tabPageControlHover(2)" onclick="tabPageControlClick(2)" onmouseout="tabPageControlOut(2)">梯队情况</td>
+					    </tr>
+					</table>
+					<table id="tabPagesContainer"style="position: relative;top: 40px;">
+					    <tbody class="tabPageSelected">
+					        <tr class="tabPage">
+					            <td><br>
+									&nbsp&nbsp皇家马德里是西班牙成立最早的俱乐部之一，它的前身是斯凯足球队，建于1896年，当时仅有会员30人，队员当时只有七八人，比赛是在利斯塔大街的一片空地上进行的。1902年3月6日，正式成立了马德里社会俱乐部，由英国人阿瑟-约翰逊任第一任主教练。1920年6月29日，西班牙国王把“Real”一词加于俱乐部名前，以此来推动足球运动在首都马德里市的发展。从此，该俱乐部正式改名为皇家马德里足球俱乐部……<br>
+									皇家马德里队成立后便开始参加全国联赛，由于当时西班牙还未举办全国联赛，只有王室举办的国王杯赛。1905年该队首次夺冠，随后又在1906、1907、1908三年连续夺冠，成为西班牙足坛的一支劲旅。1928年，西班牙甲级联赛开始举办，当时有十支球队。在前几届，该队由于实力较弱，未获得联赛冠军。直至引进了著名的守门员查莫拉后，才在1932和1933年两度夺冠。此后20多年里，该队再未获得过联赛冠军。<br>
+									&nbsp&nbsp50年代初期，皇家马德里重金聘用各国好手，引进了亨托和斯蒂法诺，达到了史无前例的黄金时期，被人们称为“皇家马德里时代”。1954年夺回久违了21年的联赛冠军，1955年又蝉联了冠军。同年，欧洲足联创办了欧洲冠军杯足球赛，皇家马德里代表西班牙参赛，没想到该队一发不可收拾，蝉联了最初的五届的冠军杯冠军。这一记录至今无人打破，皇家马德里因此也成为了欧洲足坛的“梦之旅”。70年代，皇家马德里携黄金时期的余威，继续保持了强劲的夺冠势头。虽然在这期间该队没有特别的大牌球星，但在该队的团结努力下，在1972、1975、1976、1978、1979年五夺联赛冠军。1980年，在获得联赛、杯赛双料冠军后，呈江河日下之势，除1982年获得杯赛冠军，一连六年与冠军无缘，进入了艰难的时期。1985年，皇家马德里引进了墨西哥球星桑切斯和阿根廷球星巴尔达诺，加上本国的新星布特拉各诺等，实力大增。1985、1986年该队两获欧洲联盟杯，成为联盟杯赛历史上第一支蝉联冠军的球队。1986-1990年，该队连续五次夺得联赛冠军，创造了西班牙足坛记录。但在冠军杯赛中，该队与冠军无缘，甚至创造了0:5负于AC米兰的历史最差记录。总体来说，80年代后期以联盟杯赛冠军为标志，可称该队历史上第二个黄金时期。1990年夺得联赛冠军后，由于管理经营不善，负债累累，同时老对手巴塞罗那的崛起，皇家马德里黯然失色，看着对手四次连续夺冠。1995年，该队夺得联赛冠军，但仅过一年，该队又仅获联赛第六，滑到十余年历史最低谷。1996年，卡佩罗接过帅印，率领这支豪华之师夺得冠军。1998、2000和2002年该队五年之中三夺欧洲冠军杯，更被国际足联评为“20世纪最佳球队”。<br>
+									&nbsp&nbsp进入二十一世纪以来，皇马在新主席弗拉伦蒂诺的带领下奉行“巨星政策”，菲戈、齐达内、罗纳尔多、贝克汉姆等巨星相继来到队中。不过在大肆购买球员的同时，球队的整体结构出现问题。耶罗、马克莱莱等中后场球员相继之后，皇马的中后场问题不小。奎罗斯、卡马乔、雷蒙、卢森博格等教练都没能取得成功，直到0708赛季舒斯特尔的到来。算上教练目前皇马的巴西人已达8人之多，是名副其实的一支巴西帮球队。新赛季在引入一帮精兵强将之后，毫无疑问皇马的目标只有一个，那就是冠军。</td>
+					        </tr>
+					    </tbody>
+					    <tbody class="tabPageUnSelected">
+					        <tr class="tabPage">
+					            <td><br>&nbsp&nbsp皇马保持着欧冠夺冠次数（10次）、参赛次数、出场次数、胜利次数、进球数等一系列纪录（包括改制前）。而在西班牙国内皇马一共夺得32次西班牙甲级联赛冠军及19次西班牙国王杯冠军。皇马还有预备队皇马卡斯蒂利亚（Real Madrid Castilla，即皇马B队）在西班牙足球乙级联赛比赛。另外皇马在1932年成立篮球队——皇家马德里Baloncesto，而且篮球队成就与足球队同样显赫，8次成为欧洲冠军，30次成为本土职业篮球联赛冠军。<br>
+								&nbsp&nbsp皇马被评为2014年度欧洲最佳俱乐部。<br>
+								&nbsp&nbsp皇马被评为2014年度欧洲最佳俱乐部。<br>
+								&nbsp&nbsp2009年9月10日被国际足球历史和统计联合会评为20世纪欧洲最佳俱乐部。<br>
+								&nbsp&nbsp2014年9月10日，欧洲足球俱乐部协会(ECA)大会在瑞士的日内瓦召开，欧洲俱乐部协会官方宣布：皇马被评为2014年度欧洲最佳俱乐部。<br>
+								&nbsp&nbsp皇马基金会的公益项目El Gallinero被评为最佳社会活动项目。 <br>
+								</td>
+					        </tr>
+					    </tbody>
+					    <tbody  class="tabPageUnSelected">
+					        <tr class="tabPage">
+					            <td>
+					            	<br>&nbsp&nbsp皇家马德里卡斯蒂亚是一支目前征战在西班牙丙级联赛的足球队，它是皇家马德里的预备队。成立于1930年12月16号，主场为迪斯蒂法诺球场，现由皇家马德里主席顾问、体育总监齐内丁·齐达内负责主管。有别于英格兰俱乐部各自踢不同的联赛，西班牙俱乐部的预备队和它们的一线队征战同一个联赛体制。然而，预备队和一线队在规则上不允许征战同一级别的联赛。因此皇家马德里卡斯蒂亚是不可以参加西甲联赛的。预备队现在也不可以参加国王杯的比赛了。另外，只有23岁以下的球员或者25岁以下并签了职业合同的球员才允许在一线队和预备队之间调动。<br>
+					            	&nbsp&nbsp由《法国足球》杂志进行的一项调查表明，皇家马德里、AC米兰和阿森纳是欧洲足球“第一流的足球学校”。根据这项调查，在青训系统的水平和成果方面，皇家马德里是欧洲最好的俱乐部。在西甲联赛所有20支球队中，只有莱万特、毕尔巴鄂竞技和塞维利亚三支球队里没有来自皇马青训营的球员。<br>
+									皇家马德里是在培养青少年球员方面做得最好的俱乐部。这不是俱乐部主席卡尔德隆说的话，也不是青训系统负责人米歇尔的一面之词，而是著名的《法国足球》杂志委托两所大学所做的调查得到的结果。调查结果显示，在欧洲范围内，皇家马德里是向各国顶级联赛输送球员数目最多的俱乐部。<br>
+									&nbsp&nbsp《法国足球》的报道指出，皇家马德里向欧洲各国联赛(意大利、英格兰、德国、法国和西班牙)输送的球员多达44名。但实际上，如果加上在荷兰踢球的乌尔赛斯、转会到国际米兰的坎比亚索和远赴希腊奥林匹亚科斯队效力的劳尔-布拉沃等球员，这一数字将上升到54名。<br>
+									&nbsp&nbsp显然，上述的调查研究并没有提到这些球员有多少进入了皇马的一线队以及他们取得了什么样的成绩，也没有预测未来是否将会再次出现“皇马五鹰”那样一批有才华的球员，但研究表明，依靠科学观念建立起来的皇马青训系统是真正意义上的“球员生产线”。皇家马德里输出的球员的类型各不相同，各自取得的成就也参差不齐，但像卡尼萨雷斯(38岁)、贝伦格尔(35岁)和阿尔贝托-马尔科斯(34岁)这样的老将的能力是毋庸置疑的。<br>
+									&nbsp&nbsp综观整个欧洲足坛，没有哪家俱乐部在培养球员方面取得了能够与皇家马德里相比拟的成就。排在输出球员数目第二位的梅兹俱乐部(法国)仅有29名球员效力于欧洲顶级联赛。而在西班牙，皇马的夙敌巴塞罗那也只为其他球队“培养”了24名球员。
+					            </td>
+					        </tr>
+					    </tbody>
+					</table>
+				    </div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>
+

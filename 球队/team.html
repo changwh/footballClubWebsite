@@ -1,0 +1,270 @@
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<script src="jquery.js"></script>
+		<script type="text/javascript">	
+			$(document).ready(function(){
+				$(".coach").hover(function(){
+					var id1='#name'+$(this).attr("id");
+					$(id1).animate({top:225},300);
+					var id2='#introduce'+$(this).attr("id");
+					$(id2).fadeIn();
+				},function(){
+					var id1='#name'+$(this).attr("id");
+					$(id1).animate({top:260},300);
+					var id2='#introduce'+$(this).attr("id");
+					$(id2).fadeOut();
+				});
+				$(".player").hover(function(){
+					var id1='#name'+$(this).attr("id");
+					$(id1).animate({top:146},300);
+					var id2='#introduce'+$(this).attr("id");
+					$(id2).fadeIn();
+				},function(){
+					var id1='#name'+$(this).attr("id");
+					$(id1).animate({top:260},300);
+					var id2='#introduce'+$(this).attr("id");
+					$(id2).fadeOut();
+				});
+			})
+		</script>
+	</head>
+
+	
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		.navigation
+		{
+			width: 180px;
+			height: 940px;
+			background-color: rgba(0,0,0,0.2);
+			z-index: 3;
+		}
+		.navigation ul
+		{
+			list-style:none;
+		}
+		.div_inline{ 
+			display:inline;
+			float: left;
+		}
+		.title{
+			font-size: 70;
+			position:fixed;
+			left: 10%;
+			top: 20px;
+			z-index: 3;
+		}
+		.navigation li
+		{
+			float:left;
+			height: 90px;
+			width: 180px;
+			display: block;
+			text-align: center;
+			line-height: 90px;
+			color: white;
+			font-size: 25;
+		}
+		.navigation li:hover
+		{
+			background-color: rgba(73,11,11,0.6);
+		}
+		
+	</style>
+
+	<body style="background-image:url(body.jpg);no-repeat top center #000;background-attachment: fixed; background-size: cover;">
+		<div class="div_inline">
+			<div class="navigation"style="position: fixed;left: 0px;top: 0px">
+				<a href="../主页/index.html"><img src="自制LOGO.png"width="180";height="180";style="padding: 5px"/></a>
+				<ul>
+					<a href="../俱乐部/club.html"><li id="a">俱乐部</li></a>
+					<a href="../球队/team.html"><li id="b">球队</li></a>
+					<a href="../球迷天地/fans.html"><li id="c">球迷天地</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="div_inline">
+			<div class="title"style="color:white">&nbsp&nbsp里程足球俱乐部</div>
+			<hr width=40% size=40 color=#4DC46F style="border-radius: 20px; position:fixed; top:90px;left:200px;z-index: 2">
+			<div class="vituarl" style="position: absolute;top:140px;left:170px;width: 1735px;height: 800px;overflow: hidden;">
+				<div style="position: absolute;width: 1752px;height: 800px;z-index: 1;overflow: scroll;overflow-x:hidden;overflow-y:auto;">
+					<div style="position: absolute; left: 80px;font-size: 40;color: white;">职业队成员</div>
+					<div style="position: absolute; left: 140px;top:60px;font-size: 30;color: white;">教练组</div>
+					<hr width=80% size=3 color=white style="filter:progid:DXImageTransform.Microsoft.Glow(color=white,strength=10);position: absolute;top: 102px;left: 140px;"> 
+					<div style="position: absolute; left: 160px;top:120px;">
+						<div>
+							<div class="coach" id="1" style="width: 220px;height: 295px;">
+								<a href="javascript:void(0);"><img src="coach1.jpg"></a>
+								<p id="name1" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">齐内丁 齐达内</p>
+								<p id="introduce1" style="background-color: rgba(255,255,255,0.4);width: 220px;height:34.4px;text-align: center;font-size: 20;position: absolute;display: none;">教练</p>
+							</div>
+						</div>
+						<div style="position: relative;top: 50px;">
+							<div class="coach" id="2" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="coach2.jpg"></a>
+								<p id="name2" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">大卫 贝托尼</p>
+								<p id="introduce2" style="background-color: rgba(255,255,255,0.4);width: 220px;height:34.4px;text-align: center;font-size: 20;position: absolute;top:260px;display: none;">助理教练</p>
+							</div>
+							<div class="coach" id="3" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="coach3.jpg"></a>
+								<p id="name3" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">哈米杜 ·赛迪</p>
+								<p id="introduce3" style="background-color: rgba(255,255,255,0.4);width: 220px;height:34.4px;text-align: center;font-size: 20;position: absolute;top:260px;display: none;">助理教练</p>
+							</div>
+							<div class="coach" id="4" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="coach4.jpg"></a>
+								<p id="name4" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">贝尔纳多 雷克纳</p>
+								<p id="introduce4" style="background-color: rgba(255,255,255,0.4);width: 220px;height:34.4px;text-align: center;font-size: 20;position: absolute;top:260px;display: none;">体能训练师</p>
+							</div>
+							<div class="coach" id="5" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="coach5.jpg"></a>
+								<p id="name5" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">路易斯· 罗比斯</p>
+								<p id="introduce5" style="background-color: rgba(255,255,255,0.4);width: 220px;height:34.4px;text-align: center;font-size: 20;position: absolute;top:260px;display: none;">守门员教练</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 140px;top:780px;font-size: 30;color: white;">球员</div>
+					<hr width=80% size=3 color=white style="filter:progid:DXImageTransform.Microsoft.Glow(color=white,strength=10);position: absolute;top: 820px;left: 140px;"> 
+					<div style="position: absolute; left: 160px;top:790px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="6" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player1.jpg"></a>
+								<p id="name6" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">凯洛尔•纳瓦斯</p>
+								<p id="introduce6" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：1<br>身高：1.85m<br>体重：78kg<br>守门员</p>
+							</div>
+							<div class="player" id="7" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player2.jpg"></a>
+								<p id="name7" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">基科·卡西利亚</p>
+								<p id="introduce7" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：13<br>身高：1.91m<br>体重：84kg<br>守门员</p>
+							</div>
+							<div class="player" id="8" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player3.jpg"></a>
+								<p id="name8" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">鲁本·亚涅斯</p>
+								<p id="introduce8" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：31<br>身高：1.88m<br>体重：80kg<br>守门员</p>
+							</div>
+							<div class="player" id="9" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player4.jpg"></a>
+								<p id="name9" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">塞尔吉奥•拉莫斯</p>
+								<p id="introduce9" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：4<br>身高：1.83m<br>体重：75kg<br>后卫</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 160px;top:1140px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="10" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player5.jpg"></a>
+								<p id="name10" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">佩佩</p>
+								<p id="introduce10" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：3<br>身高：1.88m<br>体重：81kg<br>后卫</p>
+							</div>
+							<div class="player" id="11" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player6.jpg"></a>
+								<p id="name11" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">瓦拉内</p>
+								<p id="introduce11" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：2<br>身高：1.91m<br>体重：78kg<br>后卫</p>
+							</div>
+							<div class="player" id="12" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player7.jpg"></a>
+								<p id="name12" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">阿尔贝罗亚</p>
+								<p id="introduce12" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：17<br>身高：1.84m<br>体重：79kg<br>后卫</p>
+							</div>
+							<div class="player" id="13" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player8.jpg"></a>
+								<p id="name13" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">卡瓦哈尔</p>
+								<p id="introduce13" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：15<br>身高：1.73m<br>体重：73kg<br>后卫</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 160px;top:1490px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="14" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player9.jpg"></a>
+								<p id="name14" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">达尼洛</p>
+								<p id="introduce14" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：23<br>身高：1.84m<br>体重：78kg<br>后卫</p>
+							</div>
+							<div class="player" id="15" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player10.jpg"></a>
+								<p id="name15" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">马塞洛</p>
+								<p id="introduce15" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：12<br>身高：1.74m<br>体重：75kg<br>后卫</p>
+							</div>
+							<div class="player" id="16" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player11.jpg"></a>
+								<p id="name16" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">纳乔</p>
+								<p id="introduce16" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：6<br>身高：1.79m<br>体重：75kg<br>后卫</p>
+							</div>
+							<div class="player" id="17" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player12.jpg"></a>
+								<p id="name17" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">克罗斯</p>
+								<p id="introduce17" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：8<br>身高：1.82m<br>体重：78kg<br>中场</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 160px;top:1840px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="18" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player13.jpg"></a>
+								<p id="name18" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">卡塞米罗</p>
+								<p id="introduce18" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：14<br>身高：1.84m<br>体重：80kg<br>中场</p>
+							</div>
+							<div class="player" id="19" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player14.jpg"></a>
+								<p id="name19" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">伊斯科</p>
+								<p id="introduce19" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：22<br>身高：1.76m<br>体重：74kg<br>中场</p>
+							</div>
+							<div class="player" id="20" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player15.jpg"></a>
+								<p id="name20" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">哈梅斯•罗德里格斯</p>
+								<p id="introduce20" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：10<br>身高：1.80m<br>体重：75kg<br>中场</p>
+							</div>
+							<div class="player" id="21" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player16.jpg"></a>
+								<p id="name21" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">贝尔</p>
+								<p id="introduce21" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：11<br>身高：1.83m<br>体重：74kg<br>中场</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 160px;top:2190px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="22" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player17.jpg"></a>
+								<p id="name22" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">莫德里奇</p>
+								<p id="introduce22" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：19<br>身高：1.74m<br>体重：65kg<br>中场</p>
+							</div>
+							<div class="player" id="23" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player18.jpg"></a>
+								<p id="name23" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">科瓦西奇</p>
+								<p id="introduce23" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：16<br>身高：1.78m<br>体重：77kg<br>中场</p>
+							</div>
+							<div class="player" id="24" style="width: 220px;height: 295px;float: left;position: relative;left: 180px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player19.jpg"></a>
+								<p id="name24" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">罗纳尔多</p>
+								<p id="introduce24" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：7<br>身高：1.85m<br>体重：80kg<br>前锋</p>
+							</div>
+							<div class="player" id="25" style="width: 220px;height: 295px;float: left;position: relative;left: 270px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player20.jpg"></a>
+								<p id="name25" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">本泽马</p>
+								<p id="introduce25" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：9<br>身高：1.87m<br>体重：79kg<br>前锋</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; left: 160px;top:2540px;">
+						<div style="position: relative;top: 50px;">
+							<div class="player" id="26" style="width: 220px;height: 295px;float: left;">
+								<a href="javascript:void(0);" ><img src="player21.jpg"></a>
+								<p id="name26" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">赫塞</p>
+								<p id="introduce26" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：20<br>身高：1.78m<br>体重：73kg<br>前锋</p>
+							</div>
+							<div class="player" id="27" style="width: 220px;height: 295px;float: left;position: relative;left: 90px;">
+								<a href="javascript:void(0);" style="position: relative;"><img src="player22.jpg"></a>
+								<p id="name27" style="background-color: rgba(255,255,255,0.4);width: 220px;text-align: center;font-size: 25;position: absolute;">卢卡斯•巴斯克斯</p>
+								<p id="introduce27" style="background-color: rgba(255,255,255,0.4);width: 220px;height:80px;text-align: center;font-size: 20;position: absolute;top:180px;display: none;">号码：18<br>身高：1.73m<br>体重：70kg<br>前锋</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
